@@ -81,9 +81,6 @@ dependencies {
     implementation 'androidx.room:room-runtime:2.4.3'
     kapt 'androidx.room:room-compiler:2.4.3'
 
-    //PowerPreference
-    implementation 'com.github.AliAsadi:PowerPreference:2.1.0'
-
     //Dagger
     kapt "com.google.dagger:dagger-compiler:2.23.1"
     implementation "com.google.dagger:dagger:2.28.3"

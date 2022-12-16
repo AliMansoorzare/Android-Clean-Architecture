@@ -19,7 +19,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.google.android.material.slider.Slider
-import com.preference.provider.PreferenceProvider.context
 import kotlinx.coroutines.*
 import serat.maemaeen.mahdavistories.PlayService
 import serat.maemaeen.mahdavistories.R

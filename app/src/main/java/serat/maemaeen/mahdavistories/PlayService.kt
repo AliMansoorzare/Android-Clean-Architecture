@@ -4,7 +4,6 @@ import android.app.Service
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.IBinder
-import com.preference.provider.PreferenceProvider.context
 
 class PlayService : Service() {
     var mediaPlayer: MediaPlayer? = null
@@ -15,7 +14,7 @@ class PlayService : Service() {
     }
 
     private fun play() {
-        mediaPlayer = MediaPlayer.create(context, R.raw.aghabiaa_file)
+        mediaPlayer = MediaPlayer.create(this, R.raw.aghabiaa_file)
         mediaPlayer?.start()
 
     }
