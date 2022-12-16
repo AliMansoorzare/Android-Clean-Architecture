@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/FeedFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="serat.maemaeen.mahdavistories.chat.ChatFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_loginFragment_to_FeedFragment"
+            app:destination="@id/FeedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FeedFragment"
+        android:name="serat.maemaeen.mahdavistories.feed.FeedFragment"
+        android:label="FeedFragment"
+        tools:layout="@layout/fragment_feed">
+
+        <action
+            android:id="@+id/action_FeedFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_FeedFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="serat.maemaeen.mahdavistories.favorite.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_FeedFragment2"
+            app:destination="@id/FeedFragment" />
+    </fragment>
+</navigation>

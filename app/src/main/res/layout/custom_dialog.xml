@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10sp"
+    android:layoutDirection="rtl"
+    android:background="@drawable/main_fragment_bg"
+    app:cardCornerRadius="20sp"
+    app:cardElevation="10dp"
+   >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10sp"
+        app:cardBackgroundColor="@color/main"
+
+        app:cardCornerRadius="20sp"
+        app:cardElevation="30dp">
+        <ImageView
+            android:id="@+id/mainImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/elias313_83" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="عنوان" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_title"
+                android:layout_marginTop="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="این یک پیام تستی است." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_below="@+id/txt_message"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11sp"
+                android:layout_marginBottom="4dp"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/main"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/yes"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:background="#f44336"
+                        android:gravity="center"
+                        android:textColor="@color/main"
+                        tools:text="آره" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/no"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="left"
+                        android:background="#4caf50"
+                        android:gravity="center"
+                        android:textColor="@color/main"
+                        tools:text="نه" />
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</com.google.android.material.card.MaterialCardView>

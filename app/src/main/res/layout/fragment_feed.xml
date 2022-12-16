@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/myParent"
+    android:background="@drawable/toolbar_main"
+
+    tools:context=".feed.FeedFragment">
+
+
+<!--    <io.alterac.blurkit.BlurLayout-->
+<!--        android:id="@+id/blurLayout"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        blurkit:blk_blurRadius="12"-->
+<!--        blurkit:blk_downscaleFactor="0.12"-->
+<!--        blurkit:blk_fps="60" />-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mainImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/main" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/FeedFragment_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_above="@+id/parentLotties"
+            android:layout_marginEnd="20dp"
+
+            android:visibility="visible" />
+
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/roundedprogressbar"
+            app:lottie_speed="5" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parentImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layoutDirection="ltr"
+            android:visibility="invisible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/mainImg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/parentLotties"
+        android:gravity="center_horizontal"
+        android:background="@drawable/toolbar"
+        android:layout_alignParentBottom="true"
+        >
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/chat"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+           android:layout_alignParentRight="true"
+            app:lottie_autoPlay="true"
+            android:layout_marginRight="10dp"
+            app:lottie_loop="true"
+            android:layout_centerVertical="true"
+            app:lottie_rawRes="@raw/chat"
+            app:lottie_speed="3" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/close"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            app:lottie_rawRes="@raw/exit"
+            app:lottie_speed="3" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/fav"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:lottie_autoPlay="true"
+           android:layout_marginLeft="10dp"
+            app:lottie_loop="true"
+           android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            app:lottie_rawRes="@raw/fheart"
+            app:lottie_speed="1" />
+    </RelativeLayout>
+    </RelativeLayout>
+

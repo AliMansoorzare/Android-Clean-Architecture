@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/toolbar_main"
+
+    android:layoutDirection="ltr"
+
+    tools:context=".storyDetails.StoryDetailsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/txtTopParent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <TextView
+            android:id="@+id/txtTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="پخش همخوانی پس زمینه"
+
+            android:textColor="@color/text"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_alignParentStart="true">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_favorite_border_white_48"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/playPauseScreen"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="0dp"
+            android:visibility="visible"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/pauseplay"
+            app:lottie_speed="3" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mainImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/main" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/roundedprogressbar"
+        app:lottie_speed="5" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/cardimageCover"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_below="@+id/txtTopParent"
+        android:layout_centerHorizontal="true"
+
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        app:cardCornerRadius="20dp"
+        app:neumorph_backgroundColor="@color/main"
+        app:neumorph_shadowColorDark="#80022B2B"
+        app:neumorph_shadowColorLight="#80FFFFFF"
+        app:neumorph_shadowElevation="7dp"
+        app:neumorph_shapeType="flat">
+
+        <ImageView
+            android:id="@+id/imageCover"
+            android:layout_width="230dp"
+            android:layout_height="230dp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/nowPlay"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ringing"
+            app:lottie_speed="-1" />
+    </soup.neumorphism.NeumorphCardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/connectionState"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/noconnection"
+        app:lottie_speed="3" />
+
+    <LinearLayout
+        android:id="@+id/vasat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardimageCover"
+        android:layout_marginTop="10sp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/text"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            tools:text="alimansoorzare" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="واحد مهدویت مصاف"
+            android:textColor="@color/text"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vasat"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:valueFrom="0"
+            android:valueTo="100"
+            app:labelBehavior="floating"
+            app:trackHeight="6dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:id="@+id/txtLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="8dp"
+                android:text="00:00"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/txtRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:text="00:00"
+                android:textColor="@color/text" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomSection"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginBottom="36dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnVolumeOnOff"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="20dp"
+            android:src="@drawable/ic_volume_on"
+            android:visibility="invisible"
+            app:tint="@color/text" />
+
+        <ImageView
+            android:id="@+id/btnGoBefore"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:padding="16dp"
+            android:src="@drawable/ic_before"
+            android:visibility="invisible"
+            app:tint="@color/text" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btnDownload"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+
+                android:background="@drawable/shape_play"
+                android:padding="16dp"
+                android:src="@drawable/ic_baseline_download_24"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/btnPlayPause"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/btnDownload"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/shape_play"
+                android:padding="16dp"
+                android:src="@drawable/ic_play"
+                app:tint="@color/black" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/downloading"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/btnPlayPause"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:visibility="invisible"
+
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/downloading"
+                app:lottie_speed="3" />
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/btnGoAfter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            android:padding="16dp"
+            android:src="@drawable/ic_next"
+            android:visibility="invisible"
+            app:tint="@color/text" />
+
+        <RelativeLayout
+            android:id="@+id/parentRelative"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:visibility="invisible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/img_detail_fav_border"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+
+                app:lottie_rawRes="@raw/heartstar"
+                app:lottie_speed="3" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/img_detail_fav"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/dheartanimation"
+                app:lottie_speed="3" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
