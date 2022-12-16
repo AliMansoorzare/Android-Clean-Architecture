@@ -22,6 +22,6 @@ A religious events audio application with clean architecture and Kotlin language
 ###### [1. Android Architecture Components (ViewModels, LiveData, Room, etc.)](https://developer.android.com/topic/architecture)<br />
 ###### [2. Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)<br />
 ###### [3. Retrofit2](https://square.github.io/retrofit/)<br />
-###### [4. Hilt](https://developer.android.com/training/dependency-injection/hilt-android)<br />
+###### [4. Dagger](https://developer.android.com/training/dependency-injection/dagger-android)<br />
 ###### [5. View Binding](https://developer.android.com/topic/libraries/view-binding)<br />
 ###### [6. Neumorphism](https://github.com/fornewid/neumorphism)
